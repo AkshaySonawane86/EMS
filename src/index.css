@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#tasklist::-webkit-scrollbar
+{
+    display: none;
+}
+
+#adminDate input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: grayscale(100%); /* Convert the date icon to gray */
+}

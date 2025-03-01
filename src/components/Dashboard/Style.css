@@ -1,0 +1,3 @@
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: grayscale(100%); /* Convert the date icon to gray */
+}
