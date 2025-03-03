@@ -3,6 +3,7 @@ import Login from "./components/Auth/Login";
 import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
 import { AuthContext } from "./context/AuthProvider";
+import Home from "./components/Dashboard/Home";
 
 
 const App = () => {
@@ -37,7 +38,9 @@ const App = () => {
       // console.log(userData);
       // console.log("UserData data is ",userData.data);
       setUser(userData.role)
+      console.log("serUser ",user);
       setLoggedInUserData(userData.data)
+      console.log("setLoggedInUserData ",loggedInUser);
       // console.log('User data from localStorage:', userData);
     }
    },[])
@@ -90,6 +93,7 @@ const App = () => {
   //  console.log(data);
    return(
     <>
+      <Home/>
        {/* {!user ? <Login handleLogin={handleLogin} /> : ''} */}
        {!user ? <Login handleLogin={handleLogin} /> : user == 'admin' ? <AdminDashboard changeUser={setUser} />  : user == 'employee' ? <EmployeeDashboard changeUser={setUser} data={loggedINUserData}/> : null }
        {/* {user == 'admin' ? <AdminDashboard /> : user == 'employee' ? <EmployeeDashboard data={loggedINUserData}/> : null}  */}
