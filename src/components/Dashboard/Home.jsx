@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import newImage from '../img/NewImage.jpg'; 
 // import newImage from '../img/NewImage.jpg';
 import newImage from "../../img/NewImage.jpg";
 import "./Home.css";
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
+
+    // State to hold the current year
+  const [currentYear, setCurrentYear] = useState('');
+
+  // useEffect to set the year when the component mounts
+  useEffect(() => {
+    const year = new Date().getFullYear();
+    setCurrentYear(year);
+  }, []);
+
     return(
         <>
            <div className="container">
@@ -15,10 +26,16 @@ const Home = () => {
             <nav>
                 <h1>EMS</h1>
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    {/* <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#service">Service</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="/login">Login</a></li> */}
+                    <li><Link to="#home">Home</Link></li>
+                    <li><Link to="#about">About</Link></li>
+                    <li><Link to="#service">Service</Link></li>
+                    <li><Link to="#contact">Contact</Link></li>
+                    <li><Link to="/loginadmin">Login</Link></li>
                 </ul>
             </nav>
             <img src={newImage} alt="new"/>
@@ -97,6 +114,18 @@ const Home = () => {
       
       <button type="submit">Submit</button>
         </div>
+
+        <footer>
+      <h1>Employee Management System</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <p>&copy; {currentYear} EMP All rights reserved.</p>
+    </footer>
       </div>
         </>
     )

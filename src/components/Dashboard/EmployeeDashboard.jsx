@@ -5,7 +5,7 @@ import TaskList from "../../TaskList/TaskList";
 
 const EmployeeDashboard = (props) => {
                            //data
-    // console.log("EmployeeDashboad data is ",data);
+    console.log("EmployeeDashboad data is ",data);
     return(
         <>
          <div className="p-10 bg-[#1C1C1C] h-screen">

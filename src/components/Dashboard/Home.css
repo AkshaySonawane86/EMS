@@ -294,4 +294,35 @@ button[type="submit"] {
     outline: none; /* Remove the default outline */
     box-shadow: 0 0 5px rgba(72, 161, 72, 0.7); /* Green glow on focus */
   }
+
+ .container footer
+{
+    width: 100%;
+    height: 300px;
+    /* border: 2px solid #000; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
+}
+
+.container footer ul
+{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+}
+
+.container footer ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
   
