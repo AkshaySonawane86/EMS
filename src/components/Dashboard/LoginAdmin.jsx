@@ -4,7 +4,6 @@ import AdminDashboard from "./AdminDashboard";
 import EmployeeDashboard from "./EmployeeDashboard";
 import LoginPage from "./LoginPage";
 import { getLocalStorage } from "../../utils/LocalStorage";
-// import { getLocalStorage, setLocalStorage } from "../utils/LocalStorage";
 
 const LoginAdmin = () =>
 {
