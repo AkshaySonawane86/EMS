@@ -122,12 +122,6 @@
     gap: 50px;
 }
 
-/* #about .about-box .about-box1,.about-box2
-{
-    width: 50%;
-    height: 50%;
-} */
-
 #about .about-box button
 {
     padding: 10px 20px;
@@ -150,11 +144,6 @@
     display: none;
     margin-top: 20px;
 }
-
-/* #about .about-box #button1
-{
-    display: block;
-} */
 
 #about .about-box1:hover .hidden-text1,.about-box2:hover .hidden-text2
 {
@@ -279,23 +268,23 @@
 }
 
 button[type="submit"] {
-    background-color: #4CAF50; /* Green background */
-    color: white;              /* White text */
-    padding: 10px 20px;        /* Padding for size */
-    border: none;              /* Remove default border */
-    border-radius: 5px;        /* Rounded corners */
-    cursor: pointer;          /* Pointer on hover */
-    font-size: 16px;           /* Font size */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    background-color: #4CAF50; 
+    color: white;           
+    padding: 10px 20px;      
+    border: none;            
+    border-radius: 5px;      
+    cursor: pointer;       
+    font-size: 16px;          
+    transition: background-color 0.3s ease;
   }
   
   button[type="submit"]:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049; 
   }
   
   button[type="submit"]:focus {
-    outline: none; /* Remove the default outline */
-    box-shadow: 0 0 5px rgba(72, 161, 72, 0.7); /* Green glow on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(72, 161, 72, 0.7); 
   }
 
  .container footer
