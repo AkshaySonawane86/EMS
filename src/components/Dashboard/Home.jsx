@@ -2,8 +2,14 @@ import React, { useEffect, useState } from "react";
 // import newImage from '../img/NewImage.jpg'; 
 // import newImage from '../img/NewImage.jpg';
 import newImage from "../../img/NewImage.jpg";
+import attendance from "../../img/attendance.svg";
+import payroll from "../../img/Payroll.svg";
+import performance from "../../img/performance.svg";
+import report from "../../img/report.svg";
+import aboutImage from "../../img/aboutImage.jpg";
+import bussines from "../../img/bussines3.jpg";
 import "./Home.css";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Home = () => {
@@ -17,6 +23,12 @@ const Home = () => {
     setCurrentYear(year);
   }, []);
 
+  const navigate = useNavigate();
+
+  const gotologinpage = () => {
+    navigate("/loginadmin");
+  };
+
     return(
         <>
            <div className="container">
@@ -26,21 +38,21 @@ const Home = () => {
             <nav>
                 <h1>EMS</h1>
                 <ul>
-                    {/* <li><a href="#home">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#service">Service</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="/login">Login</a></li> */}
-                    <li><Link to="#home">Home</Link></li>
+                    {/* <li><a href="/login">Login</a></li> */}
+                    {/* <li><Link to="#home">Home</Link></li>
                     <li><Link to="#about">About</Link></li>
                     <li><Link to="#service">Service</Link></li>
-                    <li><Link to="#contact">Contact</Link></li>
+                    <li><Link to="#contact">Contact</Link></li> */}
                     <li><Link to="/loginadmin">Login</Link></li>
                 </ul>
             </nav>
-            <img src={newImage} alt="new"/>
+            <img src={bussines} alt="new"/>
       <p>A powerful and efficient system to manage your workforce, track attendance, and streamline payroll in one place.</p>
-      <button>Get Started</button>
+      <button onClick={gotologinpage}>Get Started</button>
     </div>
   
            
@@ -48,7 +60,7 @@ const Home = () => {
 
            <div className="right-content" id="about">
            
-           <img src={newImage} alt="new"/>
+           <img src={aboutImage} alt="new"/>
           <p>Our Employee Management System is designed to help organizations manage their employees efficiently. From hiring to retirement, we streamline HR processes with automation and intelligent tools.</p>
           <div className="about-box">
             <div className="about-box1">
@@ -71,28 +83,28 @@ const Home = () => {
             <div className="box">
                 <div className="box1">
                     <h3>Employee Management</h3>
-                    <img src={newImage} alt="new"/>
+                    <img src={report} alt="new"/>
                     <h4>Store employee records</h4>
                     <button>Get Started</button>
                 </div>
 
                 <div className="box1">
                     <h3>Attendance Tracking</h3>
-                    <img src={newImage} alt="new"/>
+                    <img src={attendance} alt="new"/>
                     <h4>Track attendance & leave</h4>
                     <button>Get Started</button>
                 </div>
 
                 <div className="box1">
                     <h3>Payroll System</h3>
-                    <img src={newImage} alt="new"/>
+                    <img src={payroll} alt="new"/>
                     <h4>Process salaries easily</h4>
                     <button>Get Started</button>
                 </div>
 
                 <div className="box1">
                     <h3>Performance Reports</h3>
-                    <img src={newImage} alt="new"/>
+                    <img src={performance} alt="new"/>
                     <h4>Generate reports  </h4>
                     <button>Get Started</button>
                 </div>
@@ -116,15 +128,16 @@ const Home = () => {
         </div>
 
         <footer>
-      <h1>Employee Management System</h1>
+      {/* <h1>Employee Management System</h1> */}
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#service">Service</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><Link to="/loginadmin">Login</Link></li>
       </ul>
 
-      <p>&copy; {currentYear} EMP All rights reserved.</p>
+      <p>&copy; {currentYear} EMS All rights reserved.</p>
     </footer>
       </div>
         </>
