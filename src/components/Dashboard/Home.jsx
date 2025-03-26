@@ -85,28 +85,28 @@ const Home = () => {
                     <h3>Employee Management</h3>
                     <img src={report} alt="new"/>
                     <h4>Store employee records</h4>
-                    <button>Get Started</button>
+                    <button onClick={gotologinpage}>Get Started</button>
                 </div>
 
                 <div className="box1">
                     <h3>Attendance Tracking</h3>
                     <img src={attendance} alt="new"/>
                     <h4>Track attendance & leave</h4>
-                    <button>Get Started</button>
+                    <button onClick={gotologinpage}>Get Started</button>
                 </div>
 
                 <div className="box1">
                     <h3>Payroll System</h3>
                     <img src={payroll} alt="new"/>
                     <h4>Process salaries easily</h4>
-                    <button>Get Started</button>
+                    <button onClick={gotologinpage}>Get Started</button>
                 </div>
 
                 <div className="box1">
                     <h3>Performance Reports</h3>
                     <img src={performance} alt="new"/>
                     <h4>Generate reports  </h4>
-                    <button>Get Started</button>
+                    <button onClick={gotologinpage}>Get Started</button>
                 </div>
 
             </div>
